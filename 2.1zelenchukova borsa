@@ -1,0 +1,40 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main() {
+    // cena za plod
+    double priceP;
+    cin >> priceP;
+    //cena na zalenchuk
+    double priceZ;
+    cin >> priceZ;
+    double kilogramsP;
+    cin >> kilogramsP;
+    double kilogramsZ;
+    cin >> kilogramsZ;
+
+
+    double plod = priceP * kilogramsP;
+
+    double zele = priceZ * kilogramsZ;
+
+    double euroP = plod / 1.94;
+
+    double euroZ = zele / 1.94;
+
+    cout << euroP + euroZ << "\n";
+
+
+// namirame liceto na celiq pravoagalnik
+    
+
+
+    
+
+
+
+
+
+    return 0;
+}
