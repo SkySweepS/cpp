@@ -1,0 +1,46 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main() {
+    
+double kvadratSide;
+cin >> kvadratSide;
+
+double tilesW;
+cin >> tilesW;
+
+double tilesL;
+cin >> tilesL;
+
+
+double peikaM;
+cin >> peikaM;
+
+double peikaO;
+cin >> peikaO;
+
+double sizeObsht = kvadratSide * kvadratSide;
+
+double peika = peikaM * peikaO;
+
+double mqsto = sizeObsht - peika;
+
+double tiles = tilesW * tilesL;
+
+double needed = mqsto / tiles;
+
+double time = needed * 0.2;
+
+
+cout << needed << "\n";
+
+cout << time;
+    
+
+
+
+
+
+    return 0;
+}
