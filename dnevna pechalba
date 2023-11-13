@@ -1,0 +1,41 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main() {
+
+    int workDays;
+    cin >> workDays;
+    double moneyPerDay;
+    cin >> moneyPerDay;
+    double lv;
+    cin >> lv;
+
+    double monthlyPayment = workDays * moneyPerDay;
+
+    double yearBonus = monthlyPayment * 2.5;
+
+    double yearSalary = (monthlyPayment * 12) + yearBonus;
+
+    double final = yearSalary - (yearSalary * 0.25);
+
+    double finalLeva = final * lv;
+
+    double perDay = finalLeva / 365;
+    cout.setf (ios::fixed);
+cout.precision(2);
+
+    cout << perDay;
+
+
+
+
+
+
+
+
+
+
+
+    return 0;
+}
