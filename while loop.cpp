@@ -82,8 +82,18 @@ int main() {
     i+i;
   }
   
-  
-  
+  // while loop basic uvelichavane s 1
+  int number = 1;
+//uvelichawa number s 1
+   cout << ++number << endl;
+   cout << number << endl;
+
+
+   cout << endl;
+
+   cout << number++ << endl;
+  // uvelichava sledvashtiq number
+   cout << number << endl;
   
   
   
