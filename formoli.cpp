@@ -5,7 +5,9 @@
 #include <vector>
 #include <string>
 using namespace std;
-
+// BOOLEAN
+0 = false
+  1 = true
 
 int main() {
 // v sluchaq 3 cifri sled desettichnata zapetaq
@@ -18,3 +20,15 @@ srand(time(NULL));
 
   return 0;
 }
+// Vgradeni funkcii
+
+// Minimalna stoinost na int okolo - 2 miliarda i neshto vgradena stoinost
+INT_MIN
+
+// Maksimalna stoinost na int
+INT_MAX
+// prevrashta string v int
+stoi(number)
+
+// prevrashta int v string
+to_string(number)
