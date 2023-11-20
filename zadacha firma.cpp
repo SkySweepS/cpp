@@ -36,7 +36,7 @@ int main() {
    
     
     
-    if (total > hoursNeeded) {
+    if (total >= hoursNeeded) {
         int a = total - hoursNeeded;
         cout << "Yes!" << a << " hours left.\n";
 
