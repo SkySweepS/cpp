@@ -33,3 +33,17 @@ int main() {
   }
   
 }
+
+// trik s chisla
+//OPREDELQNE NA KOLKO CHISLA I POLUCHAVANE NA SBOR OT VAVEDENIQ BROI CHILA
+int n;
+ cin >> n;
+ int sum = 0;
+ for (int x = 0; x < n; x++)
+ {
+  int num;
+  cin >> num;
+  sum = sum + num;
+ }
+ cout << sum;
+
