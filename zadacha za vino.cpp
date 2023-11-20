@@ -1,5 +1,10 @@
 #include <iostream>
+#include <cstdlib>
+#include <stdlib.h>
+#include <ctime>
+#include <vector>
 #include <string>
+#include <climits>
 
 using namespace std;
 
@@ -20,16 +25,19 @@ int main () {
     double wineLiters = (kgGrape * sizeX) / 2.5;
   
     if (wineLiters < wineZ) {
-        cout << "It will be a tough winter! More " << wineZ - wineLiters << " litters wine needed\n";
-          cout.setf (ios::fixed);
-          cout.precision();
+
+        int x = abs(wineLiters - wineZ);
+        cout.setf (ios::fixed);
+        cout.precision(0);
+        cout << "It will be a tough winter! More " << x << " liters wine needed." << endl;;
+          
     }
-    else if (wineLiters > wineZ) {
-        cout << "Good harvest this year! Total wine: " << wineLiters << " liters\n";
-        cout << wineLiters - wineZ << " liters left\n" << (wineLiters - wineZ) / workers << " liters per person.\n";
-    }
-    else {
-        cout << "Error";
+    else if (wineLiters >= wineZ) {
+        int x = wineLiters - wineZ;
+        cout.setf (ios::fixed);
+        cout.precision(0);
+        cout << "Good harvest this year! Total wine: " << wineLiters << " liters." << endl;;
+        cout << x << " liters left -> " << (wineLiters - wineZ) / workers << " liters per person." << endl;
     }
     
     
