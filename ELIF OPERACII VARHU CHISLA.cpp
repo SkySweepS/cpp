@@ -19,8 +19,7 @@ int main() {
     cin >> nOperator;
 
 
-    cout.setf (ios::fixed);
-      cout.precision(2);
+   
 
     
 
@@ -77,11 +76,16 @@ int main() {
 
     }
     else if (nOperator == '/'){
-      
-      double result = n1 / n2;
-      cout << n1 << " " << nOperator << " " << n2 << " = " << result << endl;
+      cout.setf (ios::fixed);
+      cout.precision(2);
+
+      double result = static_cast<double>(n1) / n2;
+     
+      cout << n1 << " " << nOperator << " " << n2 << " = " << static_cast<double>(result) << endl;
     }
     else if (nOperator == '%') {
+      
+
       double result = n1 % n2;
      cout << n1 << " " << nOperator << " " << n2 << " = " << result << endl;
     }
