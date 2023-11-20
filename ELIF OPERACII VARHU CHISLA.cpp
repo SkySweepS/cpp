@@ -33,11 +33,11 @@ int main() {
         int odd = result % 2;
         if (odd == 0){
           
-          cout << n1  << " " << nOperator << " " << n2 << " = " << result << " - " << " even" << endl;
+          cout << n1  << " " << nOperator << " " << n2 << " = " << result << " - " << "even" << endl;
         }
         else {
            
-          cout << n1 << " " << nOperator << " " << n2 << " = " << result << " - " << " odd" << endl;
+          cout << n1 << " " << nOperator << " " << n2 << " = " << result << " - " << "odd" << endl;
 
         }
 
