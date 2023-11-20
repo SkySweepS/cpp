@@ -77,7 +77,7 @@ int main() {
     }
     else if (nOperator == '/'){
       cout.setf (ios::fixed);
-      cout.precision();
+      cout.precision(2);
       double result = n1 / n2;
       cout << n1 << " " << nOperator << " " << n2 << " = " << result << endl;
     }
