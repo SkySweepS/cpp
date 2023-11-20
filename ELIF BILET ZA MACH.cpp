@@ -17,7 +17,8 @@ int main() {
   int numberOfPeople;
   cin >> numberOfPeople;
 
-
+cout.setf (ios::fixed);
+cout.precision(2);
 
   double travelMoney = 0;
 
