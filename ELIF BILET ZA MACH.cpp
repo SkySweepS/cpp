@@ -46,7 +46,7 @@ if (category == "Normal"){
     cout << "Yes! You have " << tickets - ticketGroup << " leva left.\n";
   }
   else if (ticketGroup > tickets){
-    cout << "Not Enough money! You need " << ticketGroup - tickets << " leva.\n";
+    cout << "Not enough money! You need " << ticketGroup - tickets << " leva.\n";
   }
 
 }
@@ -56,7 +56,7 @@ else if (category == "VIP"){
     cout << "Yes! You have " << tickets - ticketGroup << " leva left.\n";
   }
   else if (ticketGroup > tickets){
-    cout << "Not Enough money! You need " << ticketGroup - tickets << " leva.\n";
+    cout << "Not enough money! You need " << ticketGroup - tickets << " leva.\n";
   }
 
 
