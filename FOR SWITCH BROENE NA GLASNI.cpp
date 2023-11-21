@@ -1,0 +1,46 @@
+#include <iostream>
+#include <cstdlib>
+#include <stdlib.h>
+#include <ctime>
+#include <vector>
+#include <string>
+#include <climits>
+using namespace std;
+
+
+int main() {
+
+   string word;
+   getline(cin, word);
+
+
+   int sum = 0;
+   for (int i = 0; i < word.size(); i++) {
+      char letter = word[i];
+
+     switch(letter){
+      case 'a':
+      sum += 1;
+      break;
+      case 'e':
+      sum += 2;
+      break;
+      case 'i':
+      sum += 3;
+      break;
+      case 'o':
+      sum+=4;
+      break;
+      case 'u':
+      sum += 5;
+      break;
+     }
+   }
+   cout << sum;
+  
+
+
+
+
+  return 0;
+}
