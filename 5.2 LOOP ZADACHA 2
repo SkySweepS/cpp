@@ -1,0 +1,51 @@
+#include <iostream>
+#include <ctime>
+
+using namespace std;
+
+int main() {
+  
+  int age;
+  cin >> age;
+  
+  double mashinePrice;
+  cin >> mashinePrice;
+  
+  int toyPrice;
+  cin >> toyPrice;
+  
+  int toy = 0;
+  double savedMoney = 0;
+  double birthdayMoney = 10;
+  
+  cout.setf (ios::fixed);
+cout.precision(2);
+  
+  for(int i = 1; i <= age; i++){
+    
+    if(i % 2 == 0){
+       savedMoney += birthdayMoney - 1;
+       birthdayMoney +=10;
+  }
+  else {
+    toy++;
+  }
+  
+}
+ double toyMoney = toy * toyPrice;
+ double nm =savedMoney + toyMoney;
+
+
+
+if(nm >= mashinePrice){
+  cout << "Yes! " << abs(nm - mashinePrice) << endl;
+}
+else{
+  cout << "No! " << abs(nm - mashinePrice) << endl;
+}
+   
+
+   
+   
+   return 0;
+}
