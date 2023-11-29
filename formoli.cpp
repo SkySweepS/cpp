@@ -34,6 +34,6 @@ stoi(number)
 to_string(number)
 
 // OTPECHATVA CELIQ RED , AKO E SAMO cin >> OTPECHATVA SAMO 1VATA BUKVA
-
+cin.ignore();
 string word;
    getline(cin, word);
