@@ -14,13 +14,13 @@ bool isPrime(int number) {
 
 int main() {
     int limit;
-    std::cout << "Введите предел: ";
-    std::cin >> limit;
 
-    std::cout << "Простые числа до " << limit << ": ";
+    cin >> limit;
+
+
     for (int i = 2; i <= limit; i++){
         if (isPrime(i)) {
-            std::cout << i << " ";
+            cout << i << " ";
         }
     }
 
