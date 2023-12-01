@@ -4,7 +4,7 @@ bool isPrime(int number) {
     if (number <= 1) {
         return false;
     }
-    for (int i = 2; i * i <= number; ++i) {
+    for (int i = 2; i * i <= number; i++){
         if (number % i == 0) {
             return false;
         }
@@ -18,7 +18,7 @@ int main() {
     std::cin >> limit;
 
     std::cout << "Простые числа до " << limit << ": ";
-    for (int i = 2; i <= limit; ++i) {
+    for (int i = 2; i <= limit; i++){
         if (isPrime(i)) {
             std::cout << i << " ";
         }
