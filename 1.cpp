@@ -36,16 +36,18 @@ int main() {
     
     for(int i1 = 2; i1 <= n1; i1 += 2){
       int prime;
-
-      for(int i2 = 2; i2 <= n2; i2++){
+     
+      for(prime = 2; prime <= n2; prime ++){
+          if(isPrime(prime)){
 
         for(int i3 = 2; i3 <= n3; i3 += 2){
           
-          cout << i1 << i2 << i3 << endl;
+          cout << i1 << prime << i3 << endl;
           
         }
         
       }
+    }
     }
 
 
@@ -54,9 +56,3 @@ int main() {
 
   return 0;
 }
-
-    
-
-    
-
-  
