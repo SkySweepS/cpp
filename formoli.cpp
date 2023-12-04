@@ -33,7 +33,7 @@ stoi(number)
 // prevrashta int v string
 to_string(number)
 
-// OTPECHATVA CELIQ RED , AKO E SAMO cin >> OTPECHATVA SAMO 1VATA BUKVA
+// OTPECHATVA CELIQ RED , AKO E SAMO cin >> OTPECHATVA SAMO 1VATA DUMA
 cin.ignore();
 string word;
    getline(cin, word);
