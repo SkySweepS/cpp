@@ -37,3 +37,8 @@ to_string(number)
 cin.ignore();
 string word;
    getline(cin, word);
+
+
+// namirane na strani na pravoagalnik v koordinatnata sistema s funkciq FABS:
+  double width = fabs(x2 - x1);
+  double height = fabs(y2 - y1);
