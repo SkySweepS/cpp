@@ -21,16 +21,21 @@ int main() {
   
   
   
-  for (int p1 = 1; p1 < n; p1++){
-    for(int p2 = 1; p2 < n; p2++){
-      for(char l1 = 'a'; l1 < 97 + l; l1++){
-        for(char l2 = 'a'; l2 < 97 + l; l2++){
-          for(int p3 =(p1, p2) + 1; p3 < n; p3++){
-            cout << p1 << p2 << l1 << l2 << p3 << " ";
+  for (int p1 = 1; p1 <= n; p1++){
+      for (int p2 = 1; p2 <= n; p2++){
+          for (char l1 = 'a'; l1 <= 96 + l; l1++){
+            for (char l2 = 'a'; l2 <= 96 + l; l2++){
+              for(int p3 = (p1 + 1); p3 <=n; p3++){
+                  
+                  if(p3 > p2 && p3 <=n){
+                  cout <<p1 << p2 << l1 <<l2 << p3 <<" ";
+                  
+                  }
+              }
+              }
+              
           }
-        }
       }
-    }
   }
   
   
@@ -41,4 +46,4 @@ int main() {
 
 
   return 0;
-}
+  }
