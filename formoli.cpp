@@ -42,3 +42,7 @@ string word;
 // namirane na strani na pravoagalnik v koordinatnata sistema s funkciq FABS:
   double width = fabs(x2 - x1);
   double height = fabs(y2 - y1);
+
+// ZAKRAGLQ CHISLO DO PO GOLQMATA STOINOST
+double number = 2.14;
+ceil(number);
