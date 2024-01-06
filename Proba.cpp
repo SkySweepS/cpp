@@ -12,54 +12,56 @@
 using namespace std;
 
 
+
+
+
 int main() {
 
-  
-  int lowGrades;
-  cin >> lowGrades;
-  string enough = " ";
-  int grade;
-  double gradesTotal = 0;
-  double count = 0;
-  string problem = " ";
-  double countLowG = 0;
+  string player1Name;
+  cin >> player1Name;
+  string player2Name;
+  cin >> player2Name;
 
-  while(enough != "Enough"){
-    
-    
-    problem = enough;
+  string endGame = " ";
+  string card = " ";
+
+  double player1Points = 0;
+  double player2Points = 0;
+
+  while(endGame != "End of game" || card != "End of game"){
     cin.ignore();
-    
-    getline(cin, enough);
-   cin >> grade;
-    
-    
-    gradesTotal += grade;
-     if(grade <= 4){
-      countLowG++;
-      if(countLowG == lowGrades){
-        cout << "You need a break, " << lowGrades << " poor grades." << endl;
-        break;
-      }
-    }
+    getline(cin, endGame);
+    getline(cin, card);
+    if(endGame[0] > card[0]){
+      player1Points++;
 
-    if(enough == "Enough"){
-      cout << "Average score : " << gradesTotal / count << endl;
-      cout << "Number of problems: " << count << endl;
-      cout << "Last problem: " << problem << endl;
-      break;
     }
-    
-    
-    count++;
+    else if(endGame[0] < card[0]){
+      player2Points++;
+    }
+    else if(endGame[0] == card[0]){
+      getline(cin, endGame);
+      getline(cin, card);
+      if(endGame[0] > card[0]){
+        cout << "Number wars!" << endl;
+        cout << player1Name << " is winner with " << player1Points << " points" << endl;
+        
+      }
+      else if(endGame[0] < card[0]){
+        cout << "Number wars!" << endl;
+        cout << player2Name << " is winner with " << player2Points << " points" << endl;
+        
+      }
+      break;
+      }
 
   }
-  
-
-
+cout << player1Points << endl;
   return 0;
+
 }
 
+  
     
 
     
