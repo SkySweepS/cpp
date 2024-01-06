@@ -22,10 +22,10 @@ int main() {
   int jumpHigh;
   cin >> jumpHigh;
   double wantedJump = wantedJumpHigh - 30;
-  int count = 1;
+  int count = 0;
   int count2 = 0;
 
-  if(jumpHigh > jumpHigh){
+  if(jumpHigh > wantedJump){
     count++;
     wantedJump += 5;
     count2 = 0;
