@@ -27,10 +27,14 @@ int main() {
 
   double player1Points = 0;
   double player2Points = 0;
-
-  while(endGame != "End of game" || card != "End of game"){
-    cin.ignore();
+cin.ignore();
+  while(true){
+    
     getline(cin, endGame);
+    if(endGame == "End of game"){
+      break;
+
+    }
     getline(cin, card);
     if(endGame[0] > card[0]){
       player1Points++;
