@@ -27,21 +27,23 @@ int main() {
 
   double player1Points = 0;
   double player2Points = 0;
-cin.ignore();
+
   while(true){
     
-    getline(cin, endGame);
-    if(endGame == "End of game"){
+    getline(cin >> ws, endGame);
+    if(endGame == "End of game" || card == "End of game"){
+      cout << player1Name << " has " << player1Points << " points" << endl;
+      cout << player2Name << " has " << player2Points << " points" << endl;
       break;
 
     }
     getline(cin, card);
     if(endGame[0] > card[0]){
-      player1Points++;
+      player1Points += endGame[0] - card[0];
 
     }
     else if(endGame[0] < card[0]){
-      player2Points++;
+      player2Points += card[0] - endGame[0];
     }
     else if(endGame[0] == card[0]){
       getline(cin, endGame);
@@ -60,7 +62,7 @@ cin.ignore();
       }
 
   }
-cout << player1Points << endl;
+
   return 0;
 
 }
