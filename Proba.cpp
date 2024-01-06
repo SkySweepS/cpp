@@ -31,13 +31,14 @@ int main() {
   while(true){
     
     getline(cin >> ws, endGame);
+    
     if(endGame == "End of game" || card == "End of game"){
       cout << player1Name << " has " << player1Points << " points" << endl;
       cout << player2Name << " has " << player2Points << " points" << endl;
       break;
 
     }
-    getline(cin, card);
+    getline(cin >> ws, card);
     if(endGame[0] > card[0]){
       player1Points += endGame[0] - card[0];
 
@@ -61,7 +62,7 @@ int main() {
       break;
       }
 
-  }
+    }
 
   return 0;
 
