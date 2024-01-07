@@ -6,83 +6,64 @@
 #include <stdlib.h>
 #include <ctime>
 #include <climits>
-#include <cstring>
+#include <sstream>
+
 
 
 using namespace std;
 
-
-
+//Basketball Equipment
 
 
 int main() {
 
-  int wantedJumpHigh;
-  cin >> wantedJumpHigh;
-  double wantedJump = wantedJumpHigh - 30;
-  
-  int jumpHigh;
-  cin >> jumpHigh;
-  
-  int count = 0;
-  int count2 = 0;
+  string nameOfTournament = " ";
+  int games;
 
-  if(jumpHigh > wantedJump ){
-    count++;
-    wantedJump += 5;
-    count2 = 0;
+  int winCount = 0;
+  int loseCount = 0;
+  int gamesCount = 0;
+  
+  
+
+  while(nameOfTournament != "End of tournament"){
     
-  }
-  else if(jumpHigh <= wantedJumpHigh && wantedJump <= wantedJumpHigh){
-    count++;
-    count2++;
-
-  }
-  
-  
-  while(jumpHigh <= wantedJumpHigh && wantedJump < wantedJumpHigh){
-     
-
-
-    cin >> jumpHigh;
-    
-    if(wantedJump < jumpHigh){
-      count++;
-      wantedJump += 5;
-      count2 = 0;
+    getline(cin, nameOfTournament);
+    if(nameOfTournament == "End of tournament"){
+      break;
     }
-    else if(wantedJump>= jumpHigh){
-      count++;
-      count2++;
-       if(count2 == 3){
+    getline(cin, games);
+    for(int i = 1; i <= games; i++){
+      int points1;
+      getline(cin, points1);
+      int points2;
+      getline(cin, points2);
+      gamesCount++;
+      if(points1 > points2){
+        winCount++;
         
-      break;
+        cout << "Game " << gamesCount << " of tournament " << nameOfTournament << ": win with " << points1 - points2 << " points." << endl;
+        cout << winCount << "win" << endl;
+      }
+      else if(points2 > points1){
+        loseCount++;
+        cout << "Game " << gamesCount << " of tournament " << nameOfTournament << ": lost with " << points2 - points1 << " points." << endl;
+        cout << loseCount << "lose" << endl;
+              }
     }
-      
-    }
-    if(count2 == 3){
-      break;
-    }
-   if(jumpHigh > wantedJumpHigh){
-    
-    break;
-   }
-     
   }
- 
-  if(jumpHigh > wantedJumpHigh){
-    cout << "Tihomir succeeded, he jumped over " << wantedJumpHigh << "cm after " << count << " jumps." << endl;
-  
-  }
-  if(count2 == 3){
-    cout << "Tihomir failed at " << wantedJump << "cm after " << count << " jumps." << endl;
-  }
+
+  double winPercent = winCount / games * 100;
+  double losePercent = loseCount / games * 100;
+
+  cout << winPercent << "% matches win" << endl;
+  cout << losePercent << "% matches lost" << endl;
 
   return 0;
-
 }
 
-  
     
 
     
+
+  
