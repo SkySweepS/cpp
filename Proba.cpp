@@ -6,6 +6,7 @@
 #include <stdlib.h>
 #include <ctime>
 #include <climits>
+#include <algorithm>
 
 
 
@@ -13,42 +14,32 @@ using namespace std;
 
 int main() {
 	
- double vaucher;
- cin >> vaucher;
- cin.ignore();
- string bought = " ";
- double price = 0;
- int ticket = 0;
- int other = 0;
- 
- 
- 
- while(bought != "End" || vaucher < 0){
- 	getline(cin, bought);
-	 int a = bought[0] + bought[1];
-    int b = bought[0];
+	int numberOfMovies;
+  cin >> numberOfMovies;
 
-	 
-	 if(bought.length() > 8){
-	 	price = a;
-		 ticket++;
-	 }
-	 else if(bought.length() <= 8){
-	 	price = b;
-		 other++;
-	 }
-	
-	
-	 vaucher -= price;
-	 
-	 cout << vaucher << endl;
-	 cout << a << endl;
- cout << b << endl;	
- }
+  double ratingTotal = 0;
+  vector<double> ratingVector;
+
+  cin.ignore();
+
+  for(int i = 0; i < numberOfMovies; i++){
+    string movieName;
+    getline(cin, movieName);
+    double movieRating;
+    cin >> movieRating;
+    ratingVector.push_back(movieRating);
+    ratingTotal += movieRating;
 
 
-cout << ticket << endl;
-cout << other << endl;
 
+
+    cin.ignore();
+  }
+
+  double minRating = min_element(ratingVector.begin(), ratingVector.end());
+  double maxRating = max_element(ratingVector.begin(), ratingVector.end());
+
+cout << <double>minRating << " min " << endl;
+cout << <double>maxRating << " max" << endl;
   return 0;
 }
