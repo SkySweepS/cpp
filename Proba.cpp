@@ -8,7 +8,10 @@
 #include <climits>
 #include <algorithm>
 
-
+struct Movie {
+  string name;
+  double rating;
+};
 
 using namespace std;
 
@@ -18,17 +21,16 @@ int main() {
   cin >> numberOfMovies;
 
   double ratingTotal = 0;
-  vector<double> ratingVector;
+  vector<Movie> ratingVector;
 
   cin.ignore();
 
   for(int i = 0; i < numberOfMovies; i++){
-    string movieName;
-    getline(cin, movieName);
-    double movieRating;
-    cin >> movieRating;
-    ratingVector.push_back(movieRating);
-    ratingTotal += movieRating;
+    Movie movie;
+    getline(cin, movie.name);
+    cin >> movie.rating;
+    ratingVector.push_back(movie);
+    ratingTotal += movie.rating;
 
 
 
@@ -36,10 +38,16 @@ int main() {
     cin.ignore();
   }
 
-  double minRating = min_element(ratingVector.begin(), ratingVector.end());
-  double maxRating = max_element(ratingVector.begin(), ratingVector.end());
+  auto minMovie = max_element(ratingVector.begin(), ratingVector.end(), [](const Movie& a, const Movie& b){
+    return a.rating < b.rating;
+  });
+    auto maxMovie = max_element(ratingVector.begin(), ratingVector.end(), [](const Movie& a, const Movie& b){
+      return a.rating < b.rating;
+    });
 
-cout << minRating << " min " << endl;
-cout << maxRating << " max" << endl;
-  return 0;
-}
+    cout << maxMovie.name << " is with highest rating: " << maxMovie->rating << endl;
+    cout << minMovie.name << " is with lowest rating: " << minMovie->rating << endl;
+
+
+    return 0;
+  }
