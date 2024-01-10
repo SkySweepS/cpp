@@ -39,7 +39,7 @@ int main() {
   double minRating = min_element(ratingVector.begin(), ratingVector.end());
   double maxRating = max_element(ratingVector.begin(), ratingVector.end());
 
-cout << <double>minRating << " min " << endl;
-cout << <double>maxRating << " max" << endl;
+cout << minRating << " min " << endl;
+cout << maxRating << " max" << endl;
   return 0;
 }
