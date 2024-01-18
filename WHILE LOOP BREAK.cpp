@@ -43,7 +43,7 @@ int main() {
     cout << "Goal reached! Good job!\n";
   }
   else {
-    cout << stepsLimit - steps << " more steps to reach limit\n";
+    cout << stepsLimit - steps << " more steps to reach goal.\n";
   }
   
 
