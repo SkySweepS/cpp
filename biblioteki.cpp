@@ -7,6 +7,7 @@
 #include <ctime>
 #include <climits>
 #include <cstring>
+#include <float.h>   //DBL_MIN, DBL_MAX, 
 
 
 using namespace std;
